@@ -7,7 +7,16 @@ public class Title {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
- 
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }

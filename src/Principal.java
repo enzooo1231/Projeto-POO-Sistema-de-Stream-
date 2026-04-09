@@ -1,8 +1,12 @@
+
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculo.Recommended;
 import br.com.alura.screenmatch.modelos.Chapter;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Series;
+
+import java.util.ArrayList;
+
 
 public class Principal {
     static void main() {
@@ -56,9 +60,24 @@ public class Principal {
         Chapter ep = new Chapter();
         ep.setNumero(1);
         ep.setSerie(lost);
-        ep.setTotalVisualizacoes(300); 
+        ep.setTotalVisualizacoes(300);
 
         filtro.filtra(ep);
+
+        var movieEnzo = new Movie();
+        movieEnzo.setDuracaoEmMinutos(200);
+        movieEnzo.setNome("DogVille");
+        movieEnzo.setAnoDeLancamento(2003);
+        movieEnzo.avalia(10);
+
+        ArrayList<Movie> movieLists = new ArrayList<>();
+        movieLists.add(movieEnzo);
+        movieLists.add(meuFilme);
+        movieLists.add(outroFilme);
+        System.out.println("Tamanho da lista: " +movieLists.size());
+        System.out.println("Primeiro Filme: " +movieLists.get(0).getNome());
+
+        System.out.println("toString do filme: " + movieLists);
 
     }
 }

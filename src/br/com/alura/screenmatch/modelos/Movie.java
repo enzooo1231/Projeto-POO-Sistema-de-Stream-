@@ -17,4 +17,9 @@ public class Movie extends Title implements Rating {
     public int getRating() {
            return (int) media()/2;
     }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
+    }
 }
