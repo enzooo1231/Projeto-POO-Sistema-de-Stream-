@@ -5,6 +5,11 @@ import br.com.alura.screenmatch.calculo.Rating;
 public class Movie extends Title implements Rating {
     private String diretor;
 
+    public Movie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
+
     public String getDiretor() {
         return diretor;
     }

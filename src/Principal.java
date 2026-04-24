@@ -10,11 +10,9 @@ import java.util.ArrayList;
 
 public class Principal {
     static void main() {
-        Movie meuFilme = new Movie();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
-        meuFilme.setDuracaoEmMinutos(180);
+        Movie meuFilme = new Movie("O poderoso chefão", 1970);
 
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
 
@@ -31,10 +29,8 @@ public class Principal {
 
         System.out.println(meuFilme.media());*/
 
-        Series lost = new Series();
+        Series lost = new Series("Lost",2000) ;
 
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -42,9 +38,7 @@ public class Principal {
         System.out.println("Duração para maratonar Lost: " +lost.getDuracaoEmMinutos());
 
 
-        Movie outroFilme = new Movie();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Movie outroFilme = new Movie("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calcula = new CalculadoraDeTempo();
@@ -64,10 +58,9 @@ public class Principal {
 
         filtro.filtra(ep);
 
-        var movieEnzo = new Movie();
+        var movieEnzo = new Movie("DogVille", 2003);
         movieEnzo.setDuracaoEmMinutos(200);
-        movieEnzo.setNome("DogVille");
-        movieEnzo.setAnoDeLancamento(2003);
+
         movieEnzo.avalia(10);
 
         ArrayList<Movie> movieLists = new ArrayList<>();

@@ -9,6 +9,11 @@ public class Title {
     private int duracaoEmMinutos;
 
 
+    public Title(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getNome() {
         return nome;
     }
