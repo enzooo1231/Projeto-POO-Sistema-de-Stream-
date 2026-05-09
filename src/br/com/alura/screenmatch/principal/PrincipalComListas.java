@@ -5,6 +5,9 @@ import br.com.alura.screenmatch.modelos.Series;
 import br.com.alura.screenmatch.modelos.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     static void main() {
@@ -17,16 +20,34 @@ public class PrincipalComListas {
         Series lost = new Series("Lost",2000) ;
 
 
-        ArrayList<Title> titleWacthed= new ArrayList<>();
+        List<Title> titleWacthed= new ArrayList<>();
         titleWacthed.add(movieEnzo);
         titleWacthed.add(meuFilme);
         titleWacthed.add(outroFilme);
         titleWacthed.add(lost);
 
         for(Title t : titleWacthed){
-            System.out.println(t);
-
-            System.out.println("Classificação: " + meuFilme.getRating());
+            System.out.println(t.getNome());
+            if (t instanceof Movie movie && meuFilme.getRating() > 2)
+                System.out.println("Classificação: " +movie.getRating());
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Carol");
+        System.out.println(buscaPorArtista);
+        Collections.sort(buscaPorArtista);
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(titleWacthed);
+        System.out.println(titleWacthed);
+
+        /* Utilizando a interface comparator para a ordenação por ano. */
+
+        titleWacthed.sort(Comparator.comparing(Title::getAnoDeLancamento)); /* .Reverser, dentro do comparator para mudar a ordem! */
+        System.out.println("Ordenando por ano:");
+        System.out.println(titleWacthed);
+
     }
 }
