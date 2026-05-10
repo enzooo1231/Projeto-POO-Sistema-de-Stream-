@@ -26,17 +26,13 @@ public class Cartao {
         return limite;
     }
 
-    public void setLimite(double limite) {
-        this.limite = limite;
-    }
+
 
     public double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
+
 
     public List<Compras> getCompras() {
         return compras;
