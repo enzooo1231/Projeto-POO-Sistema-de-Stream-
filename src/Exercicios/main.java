@@ -1,3 +1,5 @@
+package Exercicios;
+
 import java.util.*;
 
 public class main {

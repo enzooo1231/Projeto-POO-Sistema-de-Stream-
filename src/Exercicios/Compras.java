@@ -1,3 +1,5 @@
+package Exercicios;
+
 public class Compras implements Comparable <Compras>{
 
     private double valor;
@@ -27,7 +29,7 @@ public class Compras implements Comparable <Compras>{
 
     @Override
     public String toString() {
-        return "Compras (" +
+        return "Exercicios.Compras (" +
                 "valor=" + valor +
                 ", Descr='" + descr + '\'' +
                 ')';
